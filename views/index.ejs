@@ -33,8 +33,9 @@
                               <img class="logo_instagram" src="images/logo_text.png" alt="instagram_logo">
                               <input type="text" class="input_login" name="userID" id="userID" placeholder="전화번호, 사용자 이름 또는 이메일">
                               <input type="password" class="input_login" name="userPW" id="userPW" placeholder="비밀번호">
-                              <a href="#none"><button id="btn_login" disabled>로그인</button></a>
+                              <button id="btn_login" onclick="loginConfirm()" disabled>로그인</button>
                               <span class="button_forgot">비밀번호를 잊으셨나요?</span>
+                              <span class="sign_up">회원가입</span>
                             </div>
                           </section>
                         </div>
@@ -53,10 +54,21 @@
           <img src="images/ff2c097a681e.jpeg" alt="no" style="width:249px; height:436px;"/>
           <img src="images/b27a108592d8.jpeg" alt="no" style="width:249px; height:436px;"/>
           <img src="images/5e04169b9308.jpeg" alt="no" style="width:249px; height:436px;"/>
+        </div>
+        <div id="popup_body" style="display:none;">
+          <div class="popup_in">
+            <h1><a href="#"><img src="images/logo_text.png" alt="no"/></a></h1>
+            <span>친구들의 사진과 동영상을 보려면 가입하세요.</span>
+            <input style="margin-top:50px;" type="text" class="input_login" name="useremail" id="useremail" placeholder="휴대폰 번호 또는 이메일 주소">
+            <input type="text" class="input_login" name="username" id="username" placeholder="성명">
+            <input type="text" class="input_login" name="userid" id="userID" placeholder="사용자 이름">
+            <input type="text" class="input_login" name="userpw" id="userpwd" placeholder="비밀번호">
+            <button id="btn_signup" onclick="loginConfirm()" disabled>가입</button>
+          </div>
+          
         </div> 
     </div>
      </div>
-    <script src="javascripts/common.js"></script>
     <script src="javascripts/login.js" defer="defer" type="text/javascript" text="javascript"></script>
   </body>
 </html>

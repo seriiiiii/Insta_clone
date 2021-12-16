@@ -1,70 +1,17 @@
 
-/*
-$('.find_pwd').click(function () {
-  $('#bg_2').show();
-});
-$('#pop_up2 button').click(function () {
-  $('#bg_2').hide();
-});
-let winH = $(window).height();
-$('.login_container , .dimm').height(winH - 56);
-
-$('.id').focusout(() => {
-    let inp_id = $('.id').val();
-
-    if(inp_id == ""){
-      $('.msg').html("필수입력");
-    }
-    else{
-      $(".msg").html("");
-    }
-});
-
-$(".pw").focusout(() => {
-  let inp_pw = $('.pw').val();
-
-  if(inp_pw == ""){
-    $('.msg_2').html("필수입력");
-
-  }
-  else{ 
-    $(".msg_2").html("");
-
-  }
-});
-
-/*
-//reset btn
-$("").on("click", () => {
-  $("").html("");
-});
-*/
-
-// $('.pwd_wrap i').on('click',function(){
-//   $('input').toggleClass('active');
-//   if($('input').hasClass('active')){
-//       $(this).attr('class',"fa fa-eye-slash fa-lg")
-//       .prev('input').attr('type',"text");
-//   }else{
-//       $(this).attr('class',"fa fa-eye fa-lg")
-//       .prev('input').attr('type','password');
-//   }
-// });
-/*
-function visual() {
-  $('.pw').toggleClass('active');
-  if($('.pw').hasClass('active')){
-      $(".pw").attr('type',"text");
-  }else{
-      $(".pw").attr('type','password');
-  }
-}*/
-
 const idInput = document.getElementById('userID');
 const pwInput = document.getElementById('userPW');
 const loginBtn = document.getElementById('btn_login');
+const emailInput = document.getElementById('useremail');
+const iddInput = document.getElementById('userid');
+const pwdInput = document.getElementById('userpwd');
+const nameInput = document.getElementById('username');
+const signupBtn = document.getElementById('btn_signup');
 const linkToMain = document.getElementsByTagName('a')[0];
-
+/*
+id = test
+pw = 1234
+*/
 idInput.addEventListener('keyup', function(event) {
     if (idInput.value && pwInput.value) {
         loginBtn.disabled = false;
@@ -86,15 +33,59 @@ pwInput.addEventListener('keyup', function(event) {
         linkToMain.href = "#none";
     }
 })
-
 document.addEventListener('keyup', function(event) {
     if (event.keyCode === 13) {
         document.getElementById("btn_login").click();
     }
 })
-/*
-var windowH = $(window).height();
-$('.img > img').height(windowH - 0);*/
+
+nameInput.addEventListener('keyup', function(event) {
+    if (nameInput.value && pwdInput.value && emailInput.value && iddInput.value) {
+        signupBtn.disabled = false;
+        linkToMain.href = "file:///Users/MiaJLee/Desktop/WeCode/westagram/main.html";
+    }
+    else {
+        signupBtn.disabled = true;
+        linkToMain.href = "#none";
+    }
+})
+emailInput.addEventListener('keyup', function(event) {
+    if (nameInput.value && pwdInput.value && emailInput.value && iddInput.value) {
+        signupBtn.disabled = false;
+        linkToMain.href = "file:///Users/MiaJLee/Desktop/WeCode/westagram/main.html";
+    }
+    else {
+        signupBtn.disabled = true;
+        linkToMain.href = "#none";
+    }
+})
+iddInput.addEventListener('keyup', function(event) {
+    if (nameInput.value && pwdInput.value && emailInput.value && iddInput.value) {
+        signupBtn.disabled = false;
+        linkToMain.href = "file:///Users/MiaJLee/Desktop/WeCode/westagram/main.html";
+    }
+    else {
+        signupBtn.disabled = true;
+        linkToMain.href = "#none";
+    }
+})
+pwdInput.addEventListener('keyup', function(event) {
+    if (nameInput.value && pwdInput.value && emailInput.value && iddInput.value) {
+        signupBtn.disabled = false;
+        linkToMain.href = "file:///Users/MiaJLee/Desktop/WeCode/westagram/main.html";
+    }
+    else {
+        signupBtn.disabled = true;
+        linkToMain.href = "#none";
+    }
+})
+document.addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("btn_signup").click();
+    }
+})
+
+
 
 
 $('.img > img:gt(1)').hide();
@@ -107,3 +98,25 @@ setInterval(function(){
         .end()
         .appendTo('.img');
 },3000);
+
+function loginConfirm() {
+    // const username = document.getElementsByClassName("username").value;
+    const userID = $("#userID").val();
+    const userPW = $("#userPW").val();
+
+    if (userID == "test" && userPW == "1234")
+        location.replace("/main");
+    else if (userID == "test")
+        alert("비밀번호를 확인하세요.");
+    else if (userPW == "1234")
+        alert("아이디를 확인하세요.");
+    else 
+        alert("아이디 또는 비밀번호를 확인하세요.");
+}
+
+$('.sign_up').click(function () {
+    $('#popup_body').show();
+});
+$('#btn_signup').click(function () {
+    $('#popup_body').hide();
+});

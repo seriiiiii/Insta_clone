@@ -65,10 +65,15 @@ a {
   color : #00366B;
   align-self: center;
   font-size: 12px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
-.button_forgot:hover {
+.button_forgot, .sign_up:hover {
   cursor: pointer;
+}
+.sign_up{
+  color : #00366B;
+  align-self: center;
+  font-size: 12px;
 }
 
 #wrap {
@@ -105,6 +110,63 @@ a {
   margin-top:-214px;}
 .img > img:nth-child(6){
                     margin-left:148px;
-                    margin-top: -214px;}   
-                                                        
+                    margin-top: -214px;}  
+#popup_body{width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        background: rgba(0, 0, 0, 0.45);}                    
+.popup_in{width:350px;
+          height:500px;
+          border:1px solid #ccc;
+          position:absolute;
+          z-index:5;
+          top:50%;
+          margin-top:-250px;
+          left:50%;
+          margin-left:-175px;
+          background-color:#fff;} 
+.popup_in h1 img{
+  align-self: center;
+  width: 175px;
+}  
+.popup_in h1{text-align:center;
+          margin-top:40px;} 
+.popup_in span{
+  color: #8e8e8e;
+    color: rgba(var(--f52,142,142,142),1);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0 40px 10px;
+    text-align: center;
+} 
+.popup_in input{width:258px;
+          height:36px;
+        margin-top:15px;} 
+.popup_in button{
+  width:258px;
+  height:36px;
+  border:none;
+  border-radius:5px;
+  margin: 20px 45px;
+  color:#fff;
+  background-color: #0095f6;
+}                                 
+#btn_login:active {
+  background-color: #0095f6;
+}
+#btn_login:disabled {
+  background-color: #B9DFFC;
+}
+#btn_login:disabled:hover {
+  cursor: default;
+}
+#btn_login:enabled:hover {
+  cursor: pointer;
+}
+#btn_login:focus {
+  outline: none;
+}                                                        
                                                           
